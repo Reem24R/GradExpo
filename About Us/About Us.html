@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="About Us.css">
+    <link rel="stylesheet" href="../Project/bootstrap/bootstrap.min.css">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <title>About Us</title>
+</head>
+<body>
+<!-- NavBar Start  -->
+<div class="design">
+    <nav class="navbar">
+    
+        <h4 class="logo">GradExpo</h4>
+        <div class="link">
+          <div class="hide_links">
+            <a  href="../Main/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)" >Home</a>
+          </div>
+          <div class="hide_links">
+          <a  href="../Projects/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Projects</a>
+          </div>
+          <div class="hide_links">
+          <a  href="../About Us/About Us.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">About us</a>
+          </div>
+        </div>
+       <div  class="dark_menu">
+           <button onclick="change_theme()" id="theme"><i class="fas fa-moon"></i></button>
+           <i class="fa-solid fa-bars hidden" onclick="show_sidebar()"></i>
+       </div>
+    </nav>
+    
+</div>
+
+    <div class="sidebar">
+        <div class="top">
+            <h4 class="logo1">GradExpo</h4>
+            <i class="fa-solid fa-xmark" onclick="hide_sidebar()"></i>
+        </div>
+        <div class="links">
+            <a  href="../Main/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Home</a>
+            <a  href="../Projects/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Projects</a>
+            <a  href="../About Us/About Us.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">About us</a>
+        </div>  
+      </div>
+   
+
+<!-- NavBar End  -->
+<div class="container">
+    <section id="mission">
+        <div class="left box">
+            <h2>Our Mission</h2>
+            <p><b>Our mission is to display graduation projects of FCI students at 4th Level</b> </p>
+        </div>
+        <div class="right box2" >
+            <img src="Images/18816.jpg" alt="">
+        </div>
+    </section>
+    <div id="values">
+        <div class="title text-center fs-3">
+            <h2>Our Values</h2>
+            <p style=" font-family: 'Poetsen One', sans-serif;
+            font-style: normal;
+            font-size: 15px; font-size: 20px;">At our Graduation Projects Website for the Faculty of Computer and Information, we are guided by the following core values:</p>
+        </div>
+        <ul class="list_our_values row  d-flex justify-content-center">
+    <!--  -->
+    <li class="col-md-3 box "><h5>Community Engagement:</h5> We actively engage with the academic community, industry partners, and alumni networks to create opportunities for networking, mentorship, and knowledge sharing, enriching the educational experience and preparing students for successful careers in the field.</li>
+    <li class="col-md-3 box "><h5>Ethical Practice:</h5> We uphold the highest standards of ethical practice in research, development, and project implementation, promoting integrity, transparency, and responsible conduct among our students and faculty members.</li>
+    <li class="col-md-3 box "><h5>Innovation and Impact:</h5> We celebrate innovation and encourage students to explore cutting-edge technologies, tackle real-world challenges, and develop solutions that have a positive impact on society, industry, and the broader community.</li>
+    <li class="col-md-3 box "><h5>Academic Excellence:</h5> We are committed to showcasing the highest standards of academic excellence, highlighting the innovative and impactful projects developed by students in the fields of computer science, information technology, and related disciplines.</li>
+    <li class="col-md-3 box "><h5>Student Empowerment:</h5> We empower students to demonstrate their knowledge, skills, and creativity through their graduation projects, providing them with a platform to showcase their achievements and contribute to the advancement of their respective fields.</li>
+    <li class="col-md-3 box "><h5>Professional Development:</h5> We support the professional development of students by facilitating interactions with industry professionals, encouraging collaboration on real-world projects, and fostering a learning environment that promotes practical skills and industry-relevant experiences.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="links_aboutus">
+<a href="#"><img src="Facebook.jpeg" alt="face" height="40px" width="40px"></a>
+<a href="#"><img src="Twitter.png" height="40px" width="40px"></a>
+<a href="#"><img src="Linkedin.png" height="40px" width="40px"></a>
+</div>
+
+<!-- Footer Start -->
+<footer class="footer">
+    <h4 class="Logo">GradExpo</h4>
+    <a  href="../Main/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Home</a>
+    <a  href="../Projects/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Projects</a>
+    <a  href="../About Us/About Us.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">About us</a>
+   
+</footer>
+<!-- Footer End  -->
+<script src="script.js"></script>
+<script>
+    // animation for left side
+   const boxes =document.querySelectorAll('.box');
+   window.addEventListener('scroll',checkboxes);
+   checkboxes();
+
+   function checkboxes(){
+    const triggerBottom = window.innerHeight / 5 * 3;
+    boxes.forEach(box => {
+      const boxTop = box.getBoundingClientRect().top;
+      if(boxTop < triggerBottom){
+        box.classList.add('show');
+      }
+      else{
+        box.classList.remove('show');
+      }
+    });
+   }
+//    animation for img
+   const rightBox = document.querySelector('.right');
+
+window.addEventListener('scroll', checkRightBox);
+
+function checkRightBox() {
+    const triggerBottom = window.innerHeight / 5 * 3;
+    const boxTop = rightBox.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+        rightBox.classList.add('show');
+    } else {
+        rightBox.classList.remove('show');
+    }
+}
+
+checkRightBox(); 
+
+</script>
+</body>
+</html>

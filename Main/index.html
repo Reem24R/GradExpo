@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <!-- swiper css -->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" /> -->
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Script -->
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- NavBar Start  -->
+<div class="design">
+
+  <nav class="navbar">
+  
+    <h4 class="logo">GradExpo</h4>
+    <div class="link">
+      <div class="hide_links">
+        <a  href="../Main/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)" >Home</a>
+      </div>
+      <div class="hide_links">
+      <a  href="../Projects/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Projects</a>
+      </div>
+      <div class="hide_links">
+      <a  href="../About Us/About Us.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">About us</a>
+      </div>
+    </div>
+  <div  class="dark_menu">
+      <button onclick="change_theme()" id="theme"><i class="fas fa-moon"></i></button>
+      <i class="fa-solid fa-bars hidden" onclick="show_sidebar()"></i>
+  </div>
+</nav>
+
+</div>
+  <div class="sidebar">
+      <div class="top">
+          <h4 class="logo1">GradExpo</h4>
+          <i class="fa-solid fa-xmark" onclick="hide_sidebar()"></i>
+      </div>
+      <div class="links">
+          <a  href="../Main/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Home</a>
+          <a  href="../Projects/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Projects</a>
+          <a  href="../About Us/About Us.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">About us</a>
+      </div>  
+    </div>
+
+
+<!-- NavBar End  -->
+
+    <!-- Search Bar Start  -->
+    <div class="container">
+        <h1>Simple Search Engine</h1>
+        <div class="search-container">
+            <!-- Search icon entity -->
+            <form id="Search_Form" class="search-container">
+            <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <input type="text" id="searchInput" placeholder="Enter your search query...">
+            <button class="searchButton" onclick="search()">Search</button>
+          </form>
+        </div>
+        <!-- <ul id="searchResults"></ul> -->
+        <!-- we need to customize th search result -->
+    </div>
+    <!-- featured projects -->
+    <section class="collection">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+        <div class="content swiper-slide">
+          <img src="Images/BearScoresheets.png" alt=""style="background-color: rgba(0,0,0,0.5); color:white">
+          <div class="text-content mask justify-content-center d-flex flex-column text-center">  
+                        <h4 class="text-white">Bear Scoresheets</h4>
+                        <p class="m-0 text-white"> IT</p>
+                        <button class="btn btn-primary" onclick="window.open('../Project/Bear Scoresheets.html','_self')">Read more</button>
+          </div>
+        </div>
+        <div class="content swiper-slide">
+            <img src="Images/CollabArt.png" alt=""style="background-color: rgba(0,0,0,0.5); color:white">
+            <div class="text-content mask justify-content-center d-flex flex-column text-center">  
+                          <h4 class="text-white">CollabArt</h4>
+                          <p class="m-0 text-white">CS</p>
+              <button class="btn btn-primary" onclick="window.open('../Project/CollabArt.html','_self')">Read more</button>
+          </div>
+        </div>
+        <div class="content swiper-slide">
+            <img src="Images/player2.png" alt=""style="background-color: rgba(0,0,0,0.5); color:white">
+            <div class="text-content mask justify-content-center d-flex flex-column text-center">  
+                          <h4 class="text-white">Player 2</h4>
+                          <p class="m-0 text-white">CS</p>
+                          <button class="btn btn-primary" onclick="window.open('../Project/Player 2.html','_self')">Read more</button>
+          </div>
+        </div>
+        <div class="content swiper-slide">
+            <img src="Images/refyne.png" alt=""style="background-color: rgba(0,0,0,0.5); color:white">
+            <div class="text-content mask justify-content-center d-flex flex-column text-center">  
+                          <h4 class="text-white">Refyne</h4>
+                          <p class="m-0 text-white">AI</p>
+                          <button class="btn btn-primary" onclick="window.open('../Project/Refyne.html','_self')">Read more</button>
+          </div>
+        </div>
+        <div class="content swiper-slide">
+            <img src="Images/VulnerabilityAssessment.jpg" alt=""style="background-color: rgba(0,0,0,0.5); color:white">
+            <div class="text-content mask justify-content-center d-flex flex-column text-center">  
+                          <h4 class="text-white">Vulnerability Assessment</h4>
+                          <p class="m-0 text-white">CS</p>
+                          <button class="btn btn-primary" onclick="window.open('../Project/Vulnerability Assessment.html','_self')">Read more</button>
+          </div>
+        </div>
+        <div class="content swiper-slide">
+            <img src="Images/img-1.jpg" alt=""style="background-color: rgba(0,0,0,0.5); color:white">
+            <div class="text-content mask justify-content-center d-flex flex-column text-center">  
+                          <h4 class="text-white">FaceApp</h4>
+                          <p class="m-0 text-white">AI</p>
+                          <button class="btn btn-primary">Read more</button>
+          </div>
+        </div>
+        </div>
+        </div>
+      </section>
+
+    <!-- Search Bar End  -->
+    <!-- Footer Start -->
+    <footer class="footer">
+        <h4 class="Logo">GradExpo</h4>
+        <a  href="#Home" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Home</a>
+        <a  href="../Projects/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Projects</a>
+        <a  href="../About Us/About Us.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">About us</a>
+        <!-- <img src="facebook.png" alt=""> -->
+        <!-- <img src="twitter.png" alt=""> -->
+        <!-- <img src="linkedin.png" alt=""> -->
+    </footer>
+    <!-- freatured projects -->
+    <!-- swiper js -->
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+      <!-- end of featured projects -->
+    <!-- Footer End  -->
+    <script src="Js.js"></script>
+    
+</body>
+</html>

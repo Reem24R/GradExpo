@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="stylesheet" href="Style.css">
+    <title>Projects</title>
+
+</head>
+<body>
+<!-- NavBar Start  -->
+<div class="design">
+
+    <nav class="navbar">
+    
+      <h4 class="logo">GradExpo</h4>
+      <div class="link">
+        <div class="hide_links">
+          <a  href="../Main/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)" >Home</a>
+        </div>
+        <div class="hide_links">
+        <a  href="../Projects/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Projects</a>
+        </div>
+        <div class="hide_links">
+        <a  href="../About Us/About Us.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">About us</a>
+        </div>
+      </div>
+      <div  class="dark_menu">
+        <button class="FiltrB" onclick="show_sideFilter()" id="FBtn"><i class="fa-solid fa-filter"></i></button>
+        <button onclick="change_theme()" id="theme"><i class="fas fa-moon"></i></button>
+        <i class="fa-solid fa-bars hidden" onclick="show_sidebar()"></i>
+    </div>
+  </nav>
+  
+  </div>
+    <div class="sidebar">
+        <div class="top">
+            <h4 class="logo1">GradExpo</h4>
+            <i class="fa-solid fa-xmark" onclick="hide_sidebar()"></i>
+        </div>
+        <div class="links">
+            <a  href="../Main/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Home</a>
+            <a  href="../Projects/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Projects</a>
+            <a  href="../About Us/About Us.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">About us</a>
+        </div>  
+      </div>
+  
+  
+  <!-- NavBar End  -->
+
+<!-- Filter Start -->
+<div class="Filter">
+    <div class="filter-content">
+        <div class="ttl"><h3>Filter</h3></div>
+        <hr>
+        <!-- Form Start -->
+        <form id="filterForm" class="filterForm">
+            <!-- Partitions Filter  -->
+            <div class="ttl"><h4>Partition</h4></div>
+            <input type="checkbox" name="Part" value="Cs" id="C_S"> <label for="C_S">Cs</label>
+            <br>
+            <input type="checkbox" name="Part" value="It" id="I_T"> <label for="I_T">It</label>
+            <br>
+            <input type="checkbox" name="Part" value="Ai" id="A_I"> <label for="A_I">Ai</label>
+            <br>
+            <input type="checkbox" name="Part" value="Is" id="I_S"> <label for="I_S">Is</label>
+            <br><br>
+            <hr>
+            <!-- Category Filter -->
+            <div class="ttl"><h4>Category</h4></div>
+            <input type="checkbox" name="Category" value="Mobile App" id="Ma"> <label for="Ma">Mobile App</label>
+            <br>
+            <input type="checkbox" name="Category" value="Desktop App" id="Da"> <label for="Da">Desktop App</label>
+            <br>
+            <input type="checkbox" name="Category" value="Web" id="Web"> <label for="Web">Web</label>
+            <br>
+            <input type="checkbox" name="Category" value="Other" id="Other"> <label for="Other">Other</label>
+            <!-- <input type="radio" name="Category" value="All" id="All"> <label for="All">All</label> -->
+            <br><br>
+            <hr>
+            <br>
+            <!-- Buttons -->
+            <div class="ttl">
+            <input type="reset" name="reset" value="Clear" class="Filter-Button" id="clr">
+            <input type="submit" name="submit" value="Filter" class="Filter-Button" id="flr">
+            </div>
+        </form>
+        <!-- Form End -->
+    </div>
+</div>
+<!-- Filter End -->
+<!-- SideFltr -->
+<div class="SideFltr">
+    <div class="Side-filter-content">
+        <div class="ttl"><h3>Filter</h3>
+            <button class="FiltrB" onclick="hide_sideFilter()" id="FBtn_2"><i class="fa-solid fa-filter"></i></button>
+        </div>
+        <hr>
+        <!-- Form Start -->
+        <form id="filterForm_2">
+            <!-- Partitions Filter  -->
+            <div class="ttl"><h4>Partition</h4></div>
+            <input type="checkbox" name="Part" value="Cs" id="C_S_2"> <label for="C_S_2">Cs</label>
+            <br>
+            <input type="checkbox" name="Part" value="It" id="I_T_2"> <label for="I_T_2">It</label>
+            <br>
+            <input type="checkbox" name="Part" value="Ai" id="A_I_2"> <label for="A_I_2">Ai</label>
+            <br>
+            <input type="checkbox" name="Part" value="Is" id="I_S_2"> <label for="I_S_2">Is</label>
+            <br><br>
+            <hr>
+            <!-- Category Filter -->
+            <div class="ttl"><h4>Category</h4></div>
+            <input type="checkbox" name="Category" value="Mobile App" id="Ma_2"> <label for="Ma_2">Mobile App</label>
+            <br>
+            <input type="checkbox" name="Category" value="Desktop App" id="Da_2"> <label for="Da_2">Desktop App</label>
+            <br>
+            <input type="checkbox" name="Category" value="Web" id="Web_2"> <label for="Web_2">Web</label>
+            <br>
+            <input type="checkbox" name="Category" value="Other" id="Other_2"> <label for="Other_2">Other</label>
+            <!-- <input type="radio" name="Category" value="All" id="All"> <label for="All">All</label> -->
+            <br><br>
+            <hr>
+            <br>
+            <!-- Buttons -->
+            <div class="ttl">
+            <input type="reset" name="reset" value="Clear" class="Filter-Button" id="clr">
+            <input type="submit" name="submit" value="Filter" class="Filter-Button" id="flr">
+            </div>
+        </form>
+        <!-- Form End -->
+    </div>
+</div>
+
+
+
+
+<!-- Projects Start -->
+<div class="Projects-container row" id="projectsContainer">
+    <!-- Project 1 -->
+    <div class="Project col-md-6" data-partition="It" data-category="Other">
+        <img src="Images/VulnerabilityAssessment.jpg" alt="img" class="img">
+        <div class="project-description">
+            <p>Vulnerability Assessment</p>
+            <p>Partition: It</p>
+            <p>Category: Other</p>
+        </div>
+        <div class="cover">
+            <button class="mid" type="button" onclick="window.open('../Project/Vulnerability Assessment.html','_self')">More</button>
+        </div>
+    </div>
+    <!-- Project 2 -->
+    <div class="Project col-md-6" data-partition="Cs" data-category="Web">
+        <img src="Images/BearScoresheets.png" alt="img" class="img">
+        <div class="project-description">
+            <p>Bear Scoresheets</p>
+            <p>Partition: Cs</p>
+            <p>Category: Web</p>
+        </div>
+        <div class="cover">
+            <button class="mid" type="button" onclick="window.open('../project/Bear Scoresheets.html','_self')">More</button>
+        </div>
+    </div>
+    <!-- Project 3 -->
+    <div class="Project col-md-6" data-partition="Cs" data-category="Mobile App">
+        <img src="Images/player2.png" alt="img" class="img">
+        <div class="project-description">
+            <p>Player 2</p>
+            <p>Partition: Cs</p>
+            <p>Category: Mobile App</p>
+        </div>
+        <div class="cover">
+            <button class="mid" type="button" onclick="window.open('../project/Player 2.html','_self')">More</button>
+        </div>
+    </div>
+    <!-- Project 4 -->
+    <div class="Project col-md-6" data-partition="Ai" data-category="Desktop App">
+        <img src="Images/refyne.png" alt="img" class="img">
+        <div class="project-description">
+            <p>Refyne</p>
+            <p>Partition: Ai</p>
+            <p>Category: Desktop App</p>
+        </div>
+        <div class="cover">
+            <button class="mid" type="button" onclick="window.open('../project/Refyne.html','_self')">More</button>
+        </div>
+    </div>
+    <!-- Project 5 -->
+    <div class="Project col-md-6" data-partition="Cs" data-category="Web">
+        <img src="Images/CollabArt.png" alt="img" class="img">
+        <div class="project-description">
+            <p>CollabArt</p>
+            <p>Partition: Cs</p>
+            <p>Category: Web</p>
+        </div>
+        <div class="cover">
+            <button class="mid" type="button" onclick="window.open('../project/CollabArt.html','_self')">More</button>
+        </div>
+    </div>
+    <!-- Add more Project divs with appropriate data-partition and data-category attributes -->
+</div>
+<!-- Projects End -->
+<!-- Footer Start -->
+<footer class="footer">
+    <h4 class="Logo">GradExpo</h4>
+    <a  href="../Main/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Home</a>
+    <a  href="../Projects/index.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">Projects</a>
+    <a  href="../About Us/About Us.html" onmouseover="hover_a(this)" onmouseout="hover_link(this)">About us</a>
+    <!-- <img src="facebook.png" alt=""> -->
+    <!-- <img src="twitter.png" alt=""> -->
+    <!-- <img src="linkedin.png" alt=""> -->
+</footer>
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
